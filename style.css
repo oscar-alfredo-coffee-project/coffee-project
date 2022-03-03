@@ -54,3 +54,33 @@ h2 {
     font-size: 2em;
     font-weight: lighter;
 }
+
+#new-coffee-roast{
+    width: 75%;
+    height: 2em;
+    border-radius: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border: none;
+    background-color: lightgrey;
+}
+
+#new-coffee-name{
+    width: 75%;
+    height: 2em;
+    border-radius: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border: none;
+    background-color: lightgrey;
+}
+#new-coffee-button{
+    width: 75%;
+    height: 2em;
+    border-radius: .5em;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+}
