@@ -9,3 +9,48 @@ td, th {
 }
 
 
+#roast-selection {
+    width: 75%;
+    height: 2em;
+    border-radius: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border: none;
+    background-color: lightgrey;
+}
+
+#coffee-text {
+    width: 75%;
+    height: 2em;
+    border-radius: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border: none;
+    background-color: lightgrey;
+}
+
+h2 {
+    margin-bottom: 5em;
+    margin-top: 5em;
+
+}
+
+#submit {
+    width: 75%;
+    height: 2em;
+    border-radius: .5em;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.name {
+    font-size: 3em;
+}
+
+.small-name {
+    font-size: 2em;
+    font-weight: lighter;
+}
