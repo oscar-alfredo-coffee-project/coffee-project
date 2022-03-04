@@ -1,3 +1,6 @@
+*{
+    background-color: rgb(247, 247, 247)!important;
+}
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -114,9 +117,23 @@ body, html {
 }
 
 .bg {
-    background-image: url("images/abstract-wallpaper-purple-tulips-dark-coffee-and-white-wall_1280x1024.jpeg");
+    /*background-image: url("images/images.jpeg");*/
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.bg-coffee{
+    /*background-image: url("images/191-1911977_coffee-png-transparent-images-milk-coffee-cup-png.png");*/
+    /*height: 100%;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+
+}
+img{
+    height: 2em;
+    width: 2em;
+
 }
