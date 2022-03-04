@@ -13,7 +13,7 @@ td, th {
 
 
 #roast-selection {
-    width: 20em;
+    width: 80%;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -24,7 +24,7 @@ td, th {
 }
 
 #coffee-text {
-    width: 20em;
+    width: 80%;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -36,7 +36,7 @@ td, th {
 
 
 #submit-coffee {
-    width: 20em;
+    width: 80%;
     height: 2em;
     border-radius: .5em;
     margin-top: 1.5em;
@@ -48,7 +48,7 @@ td, th {
 
 .name {
     font-size: 2.5em;
-
+    white-space: nowrap;
 }
 
 .small-name {
@@ -60,7 +60,7 @@ td, th {
 }
 
 #new-coffee-roast{
-    width: 20em;
+    width: 80%;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -71,7 +71,7 @@ td, th {
 }
 
 #new-coffee-name{
-    width: 20em;
+    width: 80%;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -81,7 +81,7 @@ td, th {
     opacity: 50%;
 }
 #new-coffee-button{
-    width: 20em;
+    width: 80%;
     height: 2em;
     border-radius: .5em;
     margin-top: 1.5em;
@@ -121,7 +121,7 @@ body, html {
 }
 
 .bg {
-    background-image: url("images/HD Wallpapers Drinks Coffee Wallpapers.jpg");
+    background-image: url("images/output-onlinepngtools.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -144,5 +144,15 @@ img{
     align-items: center;
     font-size: 3em;
     font-weight: normal;
+    font-family: cursive;
+}
+
+@media screen and (min-width: 900px) {
+
+    .media {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 }
 
