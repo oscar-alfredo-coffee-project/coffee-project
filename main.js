@@ -1,13 +1,13 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
-    html += '<div class="d-none">' + coffee.id + '</div>';
-    html += '<div class="name"><p>' + coffee.name + '</p></div>';
-    html += '<p class="small-name">' + coffee.roast + '</p>';
-    html += '</div>';
+    var CustomHtml = '<div class="coffee">';
+    CustomHtml += '<div class="d-none">' + coffee.id + '</div>';
+    CustomHtml += '<div class="name"><p>' + coffee.name + '</p></div>';
+    CustomHtml += '<p class="small-name">' + coffee.roast + '</p>';
+    CustomHtml += '</div>';
 
-    return html;
+    return CustomHtml;
 }
 
 // ORIGINAL CODE PROVIDED
@@ -20,46 +20,49 @@ function renderCoffee(coffee) {
 // }
 
 
-
+// filtersCoffees IS A NEW FUNCTION USED TO FILTER THE LIST BASED OFF SELECTED ROAST (LIGHT, MEDIUM, DARK, DOES NOT WORK FOR ALL)
 function filtersCoffees(coffees) {
-    var html = '';
+    var CustomHtml = '';
     for(var i = 0; i < coffees.length; ++i) {
         if (coffees[i].roast === 'light') {
-            html += renderCoffee(coffees[i]);
+            CustomHtml += renderCoffee(coffees[i]);
         }
     }
-    for(var i = 0; i < coffees.length; ++i) {
-        if (coffees[i].roast === 'medium') {
-            html += renderCoffee(coffees[i]);
+    for(var j = 0; j < coffees.length; ++j) {
+        if (coffees[j].roast === 'medium') {
+            CustomHtml += renderCoffee(coffees[j]);
         }
     }
-    for(var i = 0; i < coffees.length; ++i) {
-        if (coffees[i].roast === 'dark') {
-            html += renderCoffee(coffees[i]);
+    for(var k = 0; k < coffees.length; ++k) {
+        if (coffees[k].roast === 'dark') {
+            CustomHtml += renderCoffee(coffees[k]);
         }
     }
-    return html;
+    return CustomHtml;
 }
 
 
 
 function updateCoffees(e) {
     if (e !== undefined) {
-        e.preventDefault();
-    }
+    e.preventDefault();
+}
      // don't submit the form, we just want to update the data
     var searchInput = coffeeSearch.value;
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
+
+        // THIS IF STATEMENT ALLOWS THE TEXT FIELD TO SEARCH FOR COFFEES BASED ON WHAT KEYWORDS ARE TYPED
         if ((coffee.name.toLowerCase()).includes(searchInput.toLowerCase()) && coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        // THIS ELSE IF ALLOWS THE "ALL" OPTION TO WORK AND SHOW ALL
         else if ((coffee.name.toLowerCase()).includes(searchInput.toLowerCase()) && selectedRoast === 'all') {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = filtersCoffees(filteredCoffees);
+    mainDisplay.innerHTML = filtersCoffees(filteredCoffees);
 }
 
 // THIS FUNCTION IS FOR ADDING A NEW CUSTOM COFFEES
@@ -97,13 +100,13 @@ var coffees = [
 ];
 
 
-var tbody = document.querySelector('#coffees');
+var mainDisplay = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit-coffee');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeSearch = document.querySelector('#coffee-text');
 
 
-tbody.innerHTML = filtersCoffees(coffees);
+mainDisplay .innerHTML = filtersCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 

@@ -42,15 +42,16 @@ td, th {
 }
 
 .name {
-    font-size: 3em;
+    font-size: 2.5em;
 
 }
 
 .small-name {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: lighter;
-    padding-left: 1em;
+    padding-left: 0px;
     align-self: flex-end;
+    margin: 10px;
 }
 
 #new-coffee-roast{
@@ -98,8 +99,24 @@ td, th {
 .coffee {
     display: flex;
     justify-content: flex-start;
-    margin-left: 11em;
+    width: 350px;
+    height: 4em;
+    padding-left: 2em;
 
+}
 
+#coffees {
+    width: 100%
+}
 
+body, html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("images/abstract-wallpaper-purple-tulips-dark-coffee-and-white-wall_1280x1024.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
