@@ -10,6 +10,7 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// ORIGINAL CODE PROVIDED
 // function renderCoffees(coffees) {
 //     var html = '';
 //     for(var i = coffees.length - 1; i >= 0; i--) {
@@ -18,7 +19,9 @@ function renderCoffee(coffee) {
 //     return html;
 // }
 
-function renderCoffees(coffees) {
+
+
+function filtersCoffees(coffees) {
     var html = '';
     for(var i = 0; i < coffees.length; ++i) {
         if (coffees[i].roast === 'light') {
@@ -41,24 +44,28 @@ function renderCoffees(coffees) {
 
 
 function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    if (e !== undefined) {
+        e.preventDefault();
+    }
+     // don't submit the form, we just want to update the data
     var searchInput = coffeeSearch.value;
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if ((coffee.name.toLowerCase()).includes(searchInput.toLowerCase()) && coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
         else if ((coffee.name.toLowerCase()).includes(searchInput.toLowerCase()) && selectedRoast === 'all') {
             filteredCoffees.push(coffee);
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    tbody.innerHTML = filtersCoffees(filteredCoffees);
 }
 
-
+// THIS FUNCTION IS FOR ADDING A NEW CUSTOM COFFEES
 function createCoffee(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+    e.preventDefault();
+    // don't submit the form, we just want to update the data
     var newCoffeeName = document.querySelector('#new-coffee-name').value;
     var newCoffeeRoast = document.querySelector('#new-coffee-roast').value;
     var newCoffee = {
@@ -91,15 +98,26 @@ var coffees = [
 
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#submit-coffee');
 var roastSelection = document.querySelector('#roast-selection');
-var coffeeSearch = document.getElementById('coffee-text');
-var newCoffeeSubmit = document.querySelector('#new-coffee-button');
+var coffeeSearch = document.querySelector('#coffee-text');
 
 
-tbody.innerHTML = renderCoffees(coffees);
+tbody.innerHTML = filtersCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-roastSelection.addEventListener('change', updateCoffees);
-coffeeSearch.addEventListener('keyup', updateCoffees);
+
+
+// THIS ALLOWS THE SELECT OPTIONS TO AUTO COMPLETE IN REAL TIME
+// roastSelection.addEventListener('change', updateCoffees);
+
+// THIS ALLOWS THE TEXT FIELD TO COMPLETE IN REAL TIME
+// coffeeSearch.addEventListener('keyup', updateCoffees);
+
+// ACTIVATES NEW BUTTON
+var newCoffeeSubmit = document.querySelector('#new-coffee-button');
 newCoffeeSubmit.addEventListener('click', createCoffee);
+
+
+
+var newCoffeeSearch  = document.getElementById('new-coffee-name');

@@ -10,7 +10,7 @@ td, th {
 
 
 #roast-selection {
-    width: 75%;
+    width: 20em;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -20,7 +20,7 @@ td, th {
 }
 
 #coffee-text {
-    width: 75%;
+    width: 20em;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -29,14 +29,9 @@ td, th {
     background-color: lightgrey;
 }
 
-h2 {
-    margin-bottom: 5em;
-    margin-top: 5em;
 
-}
-
-#submit {
-    width: 75%;
+#submit-coffee {
+    width: 20em;
     height: 2em;
     border-radius: .5em;
     margin-top: 1.5em;
@@ -48,15 +43,18 @@ h2 {
 
 .name {
     font-size: 3em;
+
 }
 
 .small-name {
     font-size: 2em;
     font-weight: lighter;
+    padding-left: 1em;
+    align-self: flex-end;
 }
 
 #new-coffee-roast{
-    width: 75%;
+    width: 20em;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -66,7 +64,7 @@ h2 {
 }
 
 #new-coffee-name{
-    width: 75%;
+    width: 20em;
     height: 2em;
     border-radius: .5em;
     margin-top: .5em;
@@ -75,7 +73,7 @@ h2 {
     background-color: lightgrey;
 }
 #new-coffee-button{
-    width: 75%;
+    width: 20em;
     height: 2em;
     border-radius: .5em;
     margin-top: 1.5em;
@@ -83,4 +81,25 @@ h2 {
     border: none;
     background-color: cornflowerblue;
     color: white;
+}
+
+.h3 {
+    font-size: 2em;
+    width: 100%;
+}
+
+.custom-coffee-header {
+
+    margin-bottom: 1.25em;
+    margin-top: 1em;
+    font-weight: lighter;
+}
+
+.coffee {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 11em;
+
+
+
 }
