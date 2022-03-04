@@ -1,6 +1,6 @@
-*{
-    background-color: rgb(247, 247, 247)!important;
-}
+/**{*/
+/*    background-color: rgb(247, 247, 247)!important;*/
+/*}*/
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -19,7 +19,8 @@ td, th {
     margin-top: .5em;
     margin-bottom: .5em;
     border: none;
-    background-color: lightgrey;
+    background-color: lightgrey!important;
+    opacity: 50%;
 }
 
 #coffee-text {
@@ -29,7 +30,8 @@ td, th {
     margin-top: .5em;
     margin-bottom: .5em;
     border: none;
-    background-color: lightgrey;
+    background-color: lightgrey!important;
+    opacity: 50%;
 }
 
 
@@ -40,7 +42,7 @@ td, th {
     margin-top: 1.5em;
     margin-bottom: .5em;
     border: none;
-    background-color: cornflowerblue;
+    background-color: cornflowerblue!important;
     color: white;
 }
 
@@ -64,7 +66,8 @@ td, th {
     margin-top: .5em;
     margin-bottom: .5em;
     border: none;
-    background-color: lightgrey;
+    background-color: lightgrey!important;
+    opacity: 50%;
 }
 
 #new-coffee-name{
@@ -74,7 +77,8 @@ td, th {
     margin-top: .5em;
     margin-bottom: .5em;
     border: none;
-    background-color: lightgrey;
+    background-color: lightgrey!important;
+    opacity: 50%;
 }
 #new-coffee-button{
     width: 20em;
@@ -83,7 +87,7 @@ td, th {
     margin-top: 1.5em;
     margin-bottom: .5em;
     border: none;
-    background-color: cornflowerblue;
+    background-color: cornflowerblue!important;
     color: white;
 }
 
@@ -117,23 +121,28 @@ body, html {
 }
 
 .bg {
-    /*background-image: url("images/images.jpeg");*/
+    background-image: url("images/HD Wallpapers Drinks Coffee Wallpapers.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.bg-coffee{
-    /*background-image: url("images/191-1911977_coffee-png-transparent-images-milk-coffee-cup-png.png");*/
-    /*height: 100%;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
 
-}
 img{
-    height: 2em;
-    width: 2em;
+    position: absolute;
+    left: 29em;
+    height: 5em;
+    width: 5em;
+    margin-right: 1em;
+    margin-top: .5em;
+}
 
+.bg-coffee {
+    height: 2.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: normal;
 }
