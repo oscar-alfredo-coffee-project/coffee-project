@@ -9,7 +9,7 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body class="container-fluid bg">
+<body class="container bg">
     <header class = "container d-flex justify-content-center border-bottom border-secondary">
         <img src="images/Coffee%20Cup%20free%20icons%20designed%20by%20Freepik.png">
         <h1 class="bg-coffee opacity-75 text-center ">Welcome to the Coffee Shop!</h1>
@@ -28,28 +28,30 @@
             <form class="card-body">
                 <label  class="h3" for="roast-selection">Select Roast</label>
                 <select id="roast-selection">
+<!--                    <option value="" disabled selected>Select your favorite roast!</option>-->
                     <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
-                </select><br>
-                <h3 class=" mt-3">Search Coffee Name</h3>
-                <input type="text" placeholder="Enter coffee name here" id="coffee-text"><br>
-                <input id="submit-coffee" type="submit">
+                </select>
+                <h3 class=" mt-3">Search Coffee Menu</h3>
+                <input type="text" placeholder="Enter a coffee name here" id="coffee-text">
+                <input id="submit-coffee" type="submit" class="d-none" value="enter">
             </form>
 	        <form class="card-body">
-		        <h1 class="custom-coffee-header">Add your own custom coffee!</h1>
+		        <h1 class="custom-coffee-header">Create your own coffee name!</h1>
 
 		        <label class="h3" for="new-coffee-roast">Select Roast</label>
 		        <select id="new-coffee-roast">
+<!--                    <option value="" disabled selected>Select your favorite roast!</option>-->
 			        <option>light</option>
 			        <option>medium</option>
 			        <option>dark</option>
-		        </select><br>
+		        </select>
 
 		        <h3 class=" mt-3">Custom Coffee Name</h3>
-		        <input placeholder="Enter your custom name here" type="text" id="new-coffee-name"><br>
-		        <input id="new-coffee-button" type="submit">
+		        <input placeholder="Enter your custom name here" type="text" id="new-coffee-name">
+		        <input id="new-coffee-button" type="submit" value="Add coffee!">
 
 	        </form>
         </div>

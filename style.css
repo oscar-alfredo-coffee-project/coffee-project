@@ -20,7 +20,11 @@ td, th {
     margin-bottom: .5em;
     border: none;
     background-color: lightgrey!important;
-    opacity: 50%;
+    opacity: 80%;
+}
+
+#roast-selection:hover {
+    opacity: 100%;
 }
 
 #coffee-text {
@@ -31,7 +35,11 @@ td, th {
     margin-bottom: .5em;
     border: none;
     background-color: lightgrey!important;
-    opacity: 50%;
+    opacity: 80%;
+}
+
+#coffee-text:hover {
+    opacity: 100%;
 }
 
 
@@ -67,7 +75,11 @@ td, th {
     margin-bottom: .5em;
     border: none;
     background-color: lightgrey!important;
-    opacity: 50%;
+    opacity: 80%;
+}
+
+#new-coffee-roast:hover {
+    opacity: 100%;
 }
 
 #new-coffee-name{
@@ -78,8 +90,13 @@ td, th {
     margin-bottom: .5em;
     border: none;
     background-color: lightgrey!important;
-    opacity: 50%;
+    opacity: 80%;
 }
+
+#new-coffee-name:hover {
+    opacity: 100%;
+}
+
 #new-coffee-button{
     width: 80%;
     height: 2em;
@@ -91,6 +108,11 @@ td, th {
     color: white;
 }
 
+#new-coffee-button:hover {
+    color: saddlebrown;
+}
+
+
 .h3 {
     font-size: 2em;
     width: 100%;
@@ -98,9 +120,9 @@ td, th {
 
 .custom-coffee-header {
 
-    margin-bottom: 1.25em;
-    margin-top: 1em;
+    margin-bottom: 1em;
     font-weight: lighter;
+    width: 100%;
 }
 
 .coffee {
@@ -110,6 +132,10 @@ td, th {
     height: 4em;
     padding-left: 2em;
 
+}
+
+.coffee:hover {
+    color: saddlebrown;
 }
 
 #coffees {
@@ -126,6 +152,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -147,7 +174,7 @@ img{
     font-family: cursive;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
 
     .media {
         display: flex;
@@ -156,3 +183,10 @@ img{
 
 }
 
+
+/*@media screen and (min-width: 1300px) {*/
+/*    html {*/
+/*        width: 1300px!important;*/
+
+/*    }*/
+/*}*/

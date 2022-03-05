@@ -112,10 +112,10 @@ submitButton.addEventListener('click', updateCoffees);
 
 
 // THIS ALLOWS THE SELECT OPTIONS TO AUTO COMPLETE IN REAL TIME
-// roastSelection.addEventListener('change', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
 
 // THIS ALLOWS THE TEXT FIELD TO COMPLETE IN REAL TIME
-// coffeeSearch.addEventListener('keyup', updateCoffees);
+coffeeSearch.addEventListener('keyup', updateCoffees);
 
 // ACTIVATES NEW BUTTON
 var newCoffeeSubmit = document.querySelector('#new-coffee-button');
