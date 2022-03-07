@@ -1,13 +1,13 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var CustomHtml = '<div class="coffee">';
-    CustomHtml += '<div class="d-none">' + coffee.id + '</div>';
-    CustomHtml += '<div class="name"><p>' + coffee.name + '</p></div>';
-    CustomHtml += '<p class="small-name">' + coffee.roast + '</p>';
-    CustomHtml += '</div>';
+    var coffeeDisplayedInHTML = '<div class="coffee">';
+    coffeeDisplayedInHTML += '<div class="d-none">' + coffee.id + '</div>';
+    coffeeDisplayedInHTML += '<div class="name">' + coffee.name + '</div>';
+    coffeeDisplayedInHTML += '<p class="small-name">' + coffee.roast + '</p>';
+    coffeeDisplayedInHTML += '</div>';
 
-    return CustomHtml;
+    return coffeeDisplayedInHTML;
 }
 
 // ORIGINAL CODE PROVIDED
@@ -22,23 +22,24 @@ function renderCoffee(coffee) {
 
 // filtersCoffees IS A NEW FUNCTION USED TO FILTER THE LIST BASED OFF SELECTED ROAST (LIGHT, MEDIUM, DARK, DOES NOT WORK FOR ALL)
 function filtersCoffees(coffees) {
-    var CustomHtml = '';
+    var coffeeNameFiltered = '';
     for(var i = 0; i < coffees.length; ++i) {
         if (coffees[i].roast === 'light') {
-            CustomHtml += renderCoffee(coffees[i]);
+            coffeeNameFiltered += renderCoffee(coffees[i]);
         }
     }
     for(var j = 0; j < coffees.length; ++j) {
         if (coffees[j].roast === 'medium') {
-            CustomHtml += renderCoffee(coffees[j]);
+            coffeeNameFiltered += renderCoffee(coffees[j]);
         }
     }
     for(var k = 0; k < coffees.length; ++k) {
         if (coffees[k].roast === 'dark') {
-            CustomHtml += renderCoffee(coffees[k]);
+            coffeeNameFiltered += renderCoffee(coffees[k]);
         }
     }
-    return CustomHtml;
+
+    return coffeeNameFiltered;
 }
 
 
@@ -58,7 +59,7 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
         // THIS ELSE IF ALLOWS THE "ALL" OPTION TO WORK AND SHOW ALL
-        else if ((coffee.name.toLowerCase()).includes(searchInput.toLowerCase()) && selectedRoast === 'all') {
+        else if ((coffee.name.toLowerCase()).includes(searchInput.toLowerCase()) && selectedRoast === 'all roasts' ) {
             filteredCoffees.push(coffee);
         }
     });
@@ -76,8 +77,9 @@ function createCoffee(e) {
         name: newCoffeeName,
         roast: newCoffeeRoast
     }
-    coffees.push(newCoffee);
-    updateCoffees();
+        coffees.push(newCoffee);
+        updateCoffees();
+
 }
 
 
@@ -107,7 +109,6 @@ var coffeeSearch = document.querySelector('#coffee-text');
 
 
 mainDisplay .innerHTML = filtersCoffees(coffees);
-
 submitButton.addEventListener('click', updateCoffees);
 
 
@@ -123,4 +124,4 @@ newCoffeeSubmit.addEventListener('click', createCoffee);
 
 
 
-var newCoffeeSearch  = document.getElementById('new-coffee-name');
+// var newCoffeeSearch  = document.getElementById('new-coffee-name');
