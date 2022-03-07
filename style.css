@@ -1,15 +1,15 @@
 /**{*/
 /*    background-color: rgb(247, 247, 247)!important;*/
 /*}*/
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
+/*table {*/
+/*    border-collapse: collapse;*/
+/*    margin: 15px 0;*/
+/*}*/
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
+/*td, th {*/
+/*    border: 1px solid black;*/
+/*    padding: 5px 10px;*/
+/*}*/
 
 
 #roast-selection {
@@ -57,14 +57,14 @@ td, th {
 .name {
     font-size: 2.5em;
     white-space: nowrap;
+    align-self: center;
 }
 
 .small-name {
     font-size: 1.5em;
     font-weight: lighter;
-    padding-left: 0px;
-    align-self: flex-end;
-    margin: 10px;
+    align-self: center;
+    margin: 12px 0 0 12px;
 }
 
 #new-coffee-roast{
@@ -113,10 +113,10 @@ td, th {
 }
 
 
-.h3 {
-    font-size: 2em;
-    width: 100%;
-}
+/*.h3 {*/
+/*    font-size: 2em;*/
+/*    width: 100%;*/
+/*}*/
 
 .custom-coffee-header {
 
@@ -127,9 +127,8 @@ td, th {
 
 .coffee {
     display: flex;
-    justify-content: flex-start;
     width: 50%;
-    height: 4em;
+    height: 6em;
     padding-left: 2em;
 
 }
@@ -169,10 +168,13 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: normal;
-    font-family: cursive;
+    font-family: 'Parisienne', cursive;
+
 }
+
+
 
 @media screen and (min-width: 1000px) {
 
